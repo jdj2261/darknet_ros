@@ -1,3 +1,48 @@
+# darknet_ros 설치
+
+작성자 : djjin
+
+Ubuntu 18.04 LTS에서 darknet_ros (Yolo)설치하기
+
+https://github.com/leggedrobotics/darknet_ros
+
+[TOC]
+
+## 1. Installing the packages
+
+### Dependencies
+
+This software is built on the Robotic Operating System ([ROS]), which needs to be [installed](http://wiki.ros.org/) first. Additionally, YOLO for ROS depends on following software:
+
+- [OpenCV](http://opencv.org/) (computer vision library),
+- [boost](http://www.boost.org/) (c++ library),
+
+
+
+1. 최신 버전 복제
+
+   ~~~
+   $ cd catkin_workspace/src
+   $ git clone --recursive https://github.com/djjin/darknet_ros.git
+   $ cd ../
+   ~~~
+
+2. Release mode로 빌드 (오래 걸림)
+
+   ~~~
+   $ catkin_make -DCMAKE_BUILD_TYPE=Release
+   ~~~
+
+3. launch파일 실행
+
+   ~~~
+   $ roslaunch darknet_ros darknet_ros.launch
+   ~~~
+
+   
+
+
+
 # YOLO ROS: Real-Time Object Detection for ROS
 
 ## Overview
